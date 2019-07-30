@@ -6,18 +6,19 @@ class App extends Component {
 
   state = {
     viewport: {
-      width: 400,
-      height: 400,
-      latitude: 37.7577,
-      longitude: -122.4376,
-      zoom: 8
+      width: "100vw",
+      height: "100vh",
+      latitude: 33.912470,
+      longitude: -118.202310,
+      zoom: 13
     }
   };
 
   render() {
+    const token = "pk.eyJ1IjoiZGF2aWRiZW5hdmlkZXoiLCJhIjoiY2p5bHc2OHQ1MGN4ajNnbnRrcTJ0ZGRmNCJ9.Jko64ip87P7mKYiOTECKng"
     return (
       <ReactMapGL
-        mapboxApiAccessToken={TOKEN}
+        mapboxApiAccessToken={token}
         {...this.state.viewport}
         onViewportChange={(viewport) => this.setState({ viewport })}
       />
